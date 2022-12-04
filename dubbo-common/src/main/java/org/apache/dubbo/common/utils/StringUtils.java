@@ -890,6 +890,13 @@ public final class StringUtils {
         return buf.toString();
     }
 
+    /**
+     * 将类名从大写字符分为几个部分，并用 指定符号（split） 连接各个部分。
+     * 例如，对于{@code org.apache.dubbo.xxx.YyyInvokerWrapper}，生成的名称为{" org.apache.dubbo.xxx..yyy.invoker.wrapper "}
+     * @param camelName
+     * @param split
+     * @return
+     */
     public static String camelToSplitName(String camelName, String split) {
         if (isEmpty(camelName)) {
             return camelName;

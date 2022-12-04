@@ -342,6 +342,13 @@ public class StringUtilsTest {
     }
 
     @Test
+    public void test1() {
+        String s = StringUtils.camelToSplitName("org.apache.dubbo.xxx.YyyInvokerWrapper", ".");
+        System.out.println(s);
+
+    }
+
+    @Test
     public void testToArgumentString() throws Exception {
         String s = StringUtils.toArgumentString(new Object[]{"a", 0, Collections.singletonMap("enabled", true)});
         assertThat(s, containsString("a,"));
